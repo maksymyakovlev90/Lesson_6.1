@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson_6</title>
+</head>
+<body>
+    <header class="header">
+        <h1><a href="https://html5css.ru/css/css_border.php" target="blanc">html<span>5</span>css</a></h1>
+    </header>
+    <main class="content">
+        <div class="wrapper">
+            <h3>Свойства границы CSS</h3>
+                <p>
+                    Свойства CSS <mark>border</mark> позволяют задавать стиль, ширину и цвет границы элемента. 
+                </p>
+                <div class="exp1">
+                    У меня есть границы со всех сторон.
+                </div>
+                <div class="exp2">
+                    У меня есть красная Нижняя граница.
+                </div> 
+                <div class="exp3">
+                    У меня округлые границы.
+                </div>
+                <div class="exp4">
+                    У меня синяя левая граница.
+                </div> 
+            <h3>Стиль границы</h3>
+                <p>
+                    Свойство <mark>border-style</mark> указывает тип отображаемой границы. 
+                </p>
+                <p>
+                    Допустимы следующие значения:  
+                </p>
+                <ul>
+                    <li><mark>dotted</mark> - Определяет пунктирную границу</li>
+                    <li><mark>dashed</mark> - Определяет пунктирную границу</li>
+                    <li><mark>solid</mark> - Определяет сплошную границу</li>
+                    <li><mark>double</mark> - Определяет двойную границу</li>
+                    <li><mark>groove</mark> - Определяет 3D канавку границы. Эффект зависит от значения цвета границы</li>
+                    <li><mark>ridge</mark> - Определяет трехмерную ребристую границу. Эффект зависит от значения цвета границы</li>
+                    <li><mark>inset</mark> - Определяет 3D-вставку границы. Эффект зависит от значения цвета границы</li>
+                    <li><mark>outset</mark> - Определяет трехмерную границу начала. Эффект зависит от значения цвета границы</li>
+                    <li><mark>none</mark> - Не определяет границы</li>
+                    <li><mark>hidden</mark> - Определяет скрытую границу</li>
+                </ul>
+                <p>
+                    Свойство <mark>border-style</mark> может иметь от одного до четырех значений (для верхней границы, правой границы, нижней границы и левой границы).
+                </p>
+                <div class="example">
+                    <h3>Example</h3>
+                    <div class="border-style">
+                        p.dotted {border-style: dotted;}<br>
+                        p.dashed {border-style: dashed;}<br>
+                        p.solid {border-style: solid;}<br>
+                        p.double {border-style: double;}<br>
+                        p.groove {border-style: groove;}<br>
+                        p.ridge {border-style: ridge;}<br>
+                        p.inset {border-style: inset;}<br>
+                        p.outset {border-style: outset;}<br>
+                        p.none {border-style: none;}<br>
+                        p.hidden {border-style: hidden;}<br>
+                        p.mix {border-style: dotted dashed solid double;}<br>
+                    </div>
+                    <p>Result</p>
+                    <div class="result">
+                        <div class="res1">A dotted border.</div>
+                        <div class="res2">A dashed border.</div>
+                        <div class="res3">A solid border.</div>
+                        <div class="res4">A double border.</div>
+                        <div class="res5">A groove border. The effect depends on the border-color value.</div>
+                        <div class="res6">A ridge border. The effect depends on the border-color value.</div>
+                        <div class="res7">An inset border. The effect depends on the border-color value.</div>
+                        <div class="res8">An outset border. The effect depends on the border-color value.</div>
+                        <div class="res9">No border.</div>
+                        <div class="res10">A hidden border.</div>
+                        <div class="res11">A mixed border.</div>
+                    </div>
+                </div>
+                <div class="note">
+                    <strong>Примечание:</strong> Никакие другие свойства границы CSS, описанные ниже, не будут иметь никакого эффекта, если не задано свойство <mark>border-style</mark>!
+                </div>
+                <h3>Ширина границы</h3>
+                <p>
+                    Свойство <mark>border-width</mark> задает ширину четырех границ.
+                </p>
+                <p>
+                    Ширина может быть задана как конкретный размер (в px, PT, cm, EM и т.д.) или с помощью одного из трех предварительно определенных значений: тонкий, средний, или толстый.
+                </p>
+                <p>
+                    Свойство <mark>border-width</mark> может иметь от одного до четырех значений (для верхней границы, правой границы, нижней границы и левой границы).
+                </p>
+                <div class="border-width">
+                    5px border-width
+                </div>
+                <h3>Цвет границы</h3>
+                <p>
+                    Свойство <mark>border-color</mark> используется для задания цвета четырех границ.
+                </p>
+                <p>
+                    Цвет может быть установлен:
+                </p>
+                <ul>
+                    <li>Name-укажите имя цвета, например "Red"</li>
+                    <li>Hex-укажите шестнадцатеричное значение, например "#ff0000"</li>
+                    <li>RGB-укажите RGB-значение, например "RGB (255, 0, 0)"</li>
+                    <li>Прозрачный</li>
+                </ul>
+                <p>
+                    Свойство <mark>border-color</mark> может иметь от одного до четырех значений (для верхней границы, правой границы, нижней границы и левой границы). 
+                </p>
+                <p>
+                    Если <mark>border-color</mark> не задан, он наследует цвет элемента.
+                </p>
+                <div class="border-color">
+                    Red border
+                </div>
+                <h3>Граница-отдельные стороны</h3>
+                <p>
+                    Из приведенных выше примеров видно, что можно указать другую границу для каждой стороны.
+                </p>
+                <p>
+                    В CSS есть также свойства для указания каждой из границ (верхняя, правая, Нижняя и левая):
+                </p>
+                <div class="border-align">
+                    Different Border Styles
+                </div>
+                <p>
+                    Если свойство <mark>border-style</mark> имеет четыре значения:
+                </p>
+                <ul>
+                    <li><strong>стиль границы: пунктирная Сплошная двойная пунктирная;</strong>
+                        <ul>
+                            <li>Верхняя граница пунктирная</li>
+                            <li>Правая граница сплошная</li>
+                            <li>Нижняя граница двойная</li>
+                            <li>Левая граница пунктирная</li>
+                        </ul>
+                    </li>    
+                </ul>
+                <p>
+                    Если свойство <mark>border-style</mark> имеет три значения:
+                </p>
+                <ul>
+                    <li><strong>Пограничный стиль: точечный сплошной двойной;</strong>
+                        <ul>
+                            <li>Верхняя граница пунктирная</li>
+                            <li>правая и левая границы являются сплошными</li>
+                            <li>Нижняя граница двойная</li>
+                        </ul>
+                    </li>    
+                </ul>
+                <p>
+                    Если свойство <mark>border-style</mark> имеет два значения:
+                </p>
+                <ul>
+                    <li><strong>граница стиля: пунктирная твердая;</strong>
+                        <ul>
+                            <li>верхние и нижние границы пунктирные</li>
+                            <li>правая и левая границы являются сплошными</li>
+                        </ul>
+                    </li>    
+                </ul>
+                <p>
+                    Если свойство <mark>border-style</mark> имеет одно значение:
+                </p>
+                <ul>
+                    <li><strong>граница стиля: пунктирная;</strong>
+                        <ul>
+                            <li>все четыре границы пунктирные</li>
+                        </ul>
+                    </li>    
+                </ul>
+                <p>
+                    Свойство <mark>border-style</mark> используется в приведенном выше примере. Однако, он также работает с <mark>border-width</mark> и <mark>border-color</mark>.
+                </p>
+                <h3>Граница-Сокращенное свойство</h3>
+                <p>
+                    Как видно из приведенных выше примеров, есть много свойств, которые следует учитывать при работе с границами.
+                </p>
+                <p>
+                    Чтобы сократить код, можно также указать все свойства отдельных границ в одном свойстве.
+                </p>
+                <p>
+                    Свойство <mark>border</mark> является сокращенным свойством для следующих отдельных свойств границы:
+                </p>
+                <ul>
+                    <li><mark>border-width</mark></li>
+                    <li><mark>border-style</mark> (required)</li>
+                    <li><mark>border-color</mark></li>
+                </ul>
+                <div class="example">
+                    <h3>Example</h3>
+                    <div class="border-style">
+                        p {border: 5px solid red;}
+                    </div>
+                    <p>Result</p>
+                    <div class="result">
+                        <div class="border1">
+                            Some text
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    Можно также указать все свойства отдельных границ только для одной стороны:
+                </p>
+                <div class="example">
+                    <h3>Левая граница</h3>
+                    <div class="border-style">
+                        p {<br>border-left: 6px solid red;<br>
+                        background-color: lightgrey;<br>}
+                    </div>
+                    <p>Result</p>
+                    <div class="result">
+                        <div class="border2">
+                            Some text
+                        </div>
+                    </div>
+                </div>
+                <div class="example">
+                    <h3>Нижняя граница</h3>
+                    <div class="border-style">
+                        p {<br>border-bottom: 6px solid red;<br>
+                        background-color: lightgrey;<br>}
+                    </div>
+                    <p>Result</p>
+                    <div class="result">
+                        <div class="border3">
+                            Some text
+                        </div>
+                    </div>
+                </div>
+                <h3>Закругленные границы</h3>
+                <p>
+                    Свойство <mark>border-radius</mark> используется для добавления округленных границ к элементу:
+                </p>
+                <div class="normal-border">Normal border</div>
+                <div class="round-border">Round border</div>
+                <div class="rounder-border">Rounder border</div>
+                <div class="roundest-border">Roundest border</div>
+                <h3>Все свойства границы CSS</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Свойство</th>
+                            <th>Описание</th>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Задает все свойства границы в одном объявлении</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom</td>
+                            <td>Задает все свойства нижней границы в одном объявлении</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-color</td>
+                            <td>Задает цвет нижней границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-style</td>
+                            <td>Задает стиль нижней границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-width</td>
+                            <td>Задает ширину нижней границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-color</td>
+                            <td>Задает цвет четырех границ</td>
+                        </tr>
+                        <tr>
+                            <td>border-left</td>
+                            <td>Задает все свойства левой границы в одном объявлении</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-color</td>
+                            <td>Задает цвет левой границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-style</td>
+                            <td>Задает стиль левой границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-width</td>
+                            <td>Задает ширину левой границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-radius</td>
+                            <td>Устанавливает все четыре границы-*-свойства радиуса для скругленных углов</td>
+                        </tr>
+                        <tr>
+                            <td>border-right</td>
+                            <td>Задает все свойства правой границы в одном объявлении</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-color</td>
+                            <td>Задает цвет правой границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-style</td>
+                            <td>Задает стиль правой границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-width</td>
+                            <td>Задает ширину правой границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-style</td>
+                            <td>Задает стиль четырех границ</td>
+                        </tr>
+                        <tr>
+                            <td>border-top</td>
+                            <td>Задает все свойства верхнего края в одном объявлении</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-color</td>
+                            <td>Задает цвет верхней границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-style</td>
+                            <td>Задает стиль верхней границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-width</td>
+                            <td>Задает ширину верхней границы</td>
+                        </tr>
+                        <tr>
+                            <td>border-width</td>
+                            <td>Задает ширину четырех границ</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="est">Copyright 2018-2020 HTML5CSS</div>
+    </footer>
+    
+</body>
+</html>
